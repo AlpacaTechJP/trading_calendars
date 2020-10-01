@@ -223,6 +223,7 @@ class XTKSCalendarTestCase(ExchangeCalendarTestBase, TestCase):
             pd.Timestamp("2020-08-10", tz=UTC),  # Mountain Day
             pd.Timestamp("2020-09-21", tz=UTC),  # Respect for the Aged Day
             pd.Timestamp("2020-09-22", tz=UTC),  # Autumnal Equinox
+            pd.Timestamp("2020-10-01", tz=UTC),  # JPX Trading Halt for TSE
             pd.Timestamp("2020-11-03", tz=UTC),  # Culture Day
             pd.Timestamp("2020-11-23", tz=UTC),  # Labor Thanksgiving Day
             pd.Timestamp("2020-12-31", tz=UTC),  # New Year's holiday
