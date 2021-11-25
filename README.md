@@ -1,5 +1,7 @@
 # trading_calendars
 
+AlpacaDB folk
+
 [![CI](https://github.com/quantopian/trading_calendars/workflows/CI/badge.svg)](https://github.com/quantopian/trading_calendars/actions?query=workflow%3ACI)
 [![PyPI version](https://img.shields.io/pypi/v/trading-calendars.svg)](https://pypi.org/project/trading-calendars/)
 [![Conda version](https://img.shields.io/conda/vn/conda-forge/trading-calendars.svg)](https://anaconda.org/conda-forge/trading-calendars)
