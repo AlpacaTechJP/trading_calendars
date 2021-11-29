@@ -3,7 +3,7 @@ import pandas as pd
 
 NANOSECONDS_PER_MINUTE = int(6e10)
 
-NP_NAT = np.array([np.datetime64('NaT').astype(np.int64)])[0]
+NP_NAT = np.array([np.datetime64('NaT')])[0].astype(np.int64)
 
 
 def next_divider_idx(dividers, minute_val):
