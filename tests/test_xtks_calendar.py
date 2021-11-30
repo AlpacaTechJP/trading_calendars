@@ -263,7 +263,7 @@ class XTKSCalendarTestCase(ExchangeCalendarTestBase, TestCase):
             pd.Timestamp("2022-01-01", tz="UTC"),  # New Year's Day
             pd.Timestamp("2022-01-02", tz="UTC"),  # Market Holiday
             pd.Timestamp("2022-01-03", tz="UTC"),  # Market Holiday
-            pd.Timestamp("2022-01-11", tz="UTC"),  # Coming of Age Day
+            pd.Timestamp("2022-01-10", tz="UTC"),  # Coming of Age Day
             pd.Timestamp("2022-02-11", tz="UTC"),  # National Foundation Day
             pd.Timestamp("2022-02-23", tz="UTC"),  # Emperor's Birthday
             pd.Timestamp("2022-03-21", tz="UTC"),  # Vernal Equinox
