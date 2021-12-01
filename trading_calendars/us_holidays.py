@@ -157,6 +157,16 @@ USMemorialDay = Holiday(
     offset=DateOffset(weekday=MO(1)),
 )
 
+USJuneteenthNationalIndependenceDay = Holiday(
+    # NOTE: The day was recognized as a federal holiday on June 17, 2021.
+    # See https://en.wikipedia.org/wiki/Juneteenth.
+    "Juneteenth National Independence Day",
+    month=6,
+    day=19,
+    start_date=Timestamp("2022-01-01"),
+    offset=DateOffset(weekday=MO(1)),
+)
+
 USIndependenceDayBefore1954 = Holiday(
     "July 4th",
     month=7,
