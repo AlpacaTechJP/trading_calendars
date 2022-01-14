@@ -137,7 +137,13 @@ USMemorialDay = Holiday(
     start_date=Timestamp("1971-01-01"),
     offset=DateOffset(weekday=MO(1)),
 )
-
+USJuneteenth = Holiday(
+    "Juneteenth National Independence Day",
+    month=6,
+    day=19,
+    start_date=Timestamp("2022-01-01"),
+    observance=nearest_workday
+)
 USIndependenceDayBefore1954 = Holiday(
     "July 4th",
     month=7,
