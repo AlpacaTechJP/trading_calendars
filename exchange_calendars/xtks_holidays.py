@@ -83,6 +83,7 @@ VernalEquinoxes = [
     Timestamp("2019-03-21"),
     Timestamp("2020-03-20"),
     Timestamp("2021-03-20"),
+    Timestamp("2022-03-21"),
 ]
 
 # The Golden Week holidays (late April - early May) are listed in reverse
@@ -249,6 +250,7 @@ AutumnalEquinoxes = [
     Timestamp("2019-09-23"),
     Timestamp("2020-09-22"),
     Timestamp("2021-09-23"),
+    Timestamp("2022-09-23"),
 ]
 
 # If the Autumnal Equinox falls on a Wednesday, the Tuesday before
