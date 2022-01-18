@@ -160,6 +160,26 @@ class TestXTKSCalendar(ExchangeCalendarTestBase):
             "2021-11-23",  # Labor Thanksgiving Day
             "2021-12-31",  # Market Holiday
             #
+            # 2022
+            "2022-01-01",  # New Year's Day
+            "2022-01-02",  # Market Holiday
+            "2022-01-03",  # Market Holiday
+            "2022-01-10",  # Coming of Age Day
+            "2022-02-11",  # National Foundation Day #
+            "2022-02-23",  # Emperor's Birthday
+            "2022-03-21",  # Vernal Equinox
+            "2022-04-29",  # Showa Day
+            "2022-05-03",  # Constitution Memorial Day
+            "2022-05-04",  # Greenery Day
+            "2022-05-05",  # Children's Day
+            "2022-07-18",  # Marine Day
+            "2022-08-11",  # Mountain Day
+            "2022-09-19",  # Respect for the Aged Day
+            "2022-09-23",  # Autumnal Equinox
+            "2022-10-10",  # Sports Day
+            "2022-11-03",  # Culture Day
+            "2022-11-23",  # Labor Thanksgiving Day
+            "2022-12-31",  # Market Holiday
             # Mountain Day 11th August, observed from 2016.
             "2016-08-11",
             "2019-08-12",  # Falls on Sunday, made up on Monday.
