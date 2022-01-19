@@ -8,7 +8,7 @@ break_start times and break_end times.
 This script can be run from the root of the repository with:
     $ python etc/make_exchange_calendar_test_csv.py <calendar_iso_code> <start> <end>
 where:
-    <calendar_is_code>
+    <calendar_iso_code>
         Code for the corresponding calendar, e.g. "XNYS"
 
     <start> optional, default: "existing" if existing, else "default"
