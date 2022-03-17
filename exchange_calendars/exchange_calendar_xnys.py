@@ -54,6 +54,7 @@ from .us_holidays import (
     USMemorialDay,
     USMemorialDay1964to1969,
     USMemorialDayBefore1964,
+    USJuneteenth,
     USNationalDaysofMourning,
     USNewYearsDay,
     USPresidentsDay,
@@ -85,6 +86,7 @@ class XNYSExchangeCalendar(ExchangeCalendar):
     - Good Friday (two days before Easter Sunday)
     - Memorial Day (May 30th, before 1970, with rule change in 1964)
     - Memorial Day (last Monday in May, after 1970)
+    - Juneteenth (June 16th, since 2022)
     - Independence Day (July 4th Sunday to Monday, before 1954)
     - Independence Day (observed on the nearest weekday to July 4th, after
       1953)
@@ -175,6 +177,7 @@ class XNYSExchangeCalendar(ExchangeCalendar):
                 USMemorialDayBefore1964,
                 USMemorialDay1964to1969,
                 USMemorialDay,
+                USJuneteenth,
                 USIndependenceDayBefore1954,
                 USIndependenceDay,
                 USLaborDay,
