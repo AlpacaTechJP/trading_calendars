@@ -254,7 +254,7 @@ class XNYSCalendarTestCase(ExchangeCalendarTestBase, TestCase):
     def test_2023(self):
         expected_holidays_2023 = [
             pd.Timestamp("2023-01-02", tz="UTC"),  # New Years Day
-            pd.Timestamp("2023-01-16", tz="UTC"),  # Martin Luther King, Jr. Day
+            pd.Timestamp("2023-01-16", tz="UTC"),  # Martin Luther King Jr. Day
             pd.Timestamp("2023-02-20", tz="UTC"),  # Washington's Birthday
             pd.Timestamp("2023-04-07", tz="UTC"),  # Good Friday
             pd.Timestamp("2023-05-29", tz="UTC"),  # Memorial Day
@@ -273,10 +273,14 @@ class XNYSCalendarTestCase(ExchangeCalendarTestBase, TestCase):
         for session_label in expected_holidays_2023:
             self.assertNotIn(session_label, self.calendar.all_sessions)
 
-        for early_close_session_label in early_closes:
-            self.assertIn(early_close_session_label, self.calendar.early_closes)
+        for session_label in early_closes:
+            self.assertIn(session_label, self.calendar.early_closes)
 
-        weekdays = pd.bdate_range(start="2023-01-01", end="2023-12-31", tz="UTC")
+        weekdays = pd.bdate_range(
+            start="2023-01-01",
+            end="2023-12-31",
+            tz="UTC",
+        )
         bdays = weekdays[~weekdays.isin(expected_holidays_2023)]
         for session_label in bdays:
             self.assertIn(session_label, self.calendar.all_sessions)

@@ -311,7 +311,11 @@ class XTKSCalendarTestCase(ExchangeCalendarTestBase, TestCase):
         for session_label in expected_holidays_2023:
             self.assertNotIn(session_label, self.calendar.all_sessions)
 
-        weekdays = pd.bdate_range(start="2023-01-01", end="2023-12-31", tz="UTC")
+        weekdays = pd.bdate_range(
+            start="2023-01-01",
+            end="2023-12-31",
+            tz="UTC",
+        )
         bdays = weekdays[~weekdays.isin(expected_holidays_2023)]
         for session_label in bdays:
             self.assertIn(session_label, self.calendar.all_sessions)
