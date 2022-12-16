@@ -90,6 +90,7 @@ VernalEquinoxes = [
     Timestamp('2020-03-20'),
     Timestamp('2021-03-20'),
     Timestamp('2022-03-21'),
+    Timestamp('2023-03-21'),
 ]
 
 # The Golden Week holidays (late April - early May) are listed in reverse

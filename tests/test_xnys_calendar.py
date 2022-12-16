@@ -250,3 +250,37 @@ class XNYSCalendarTestCase(ExchangeCalendarTestBase, TestCase):
         self.assertFalse(self.calendar.is_open_on_minute(wednesday_before))
         self.assertTrue(self.calendar.is_open_on_minute(friday_after_open))
         self.assertTrue(self.calendar.is_open_on_minute(friday_after))
+
+    def test_2023(self):
+        expected_holidays_2023 = [
+            pd.Timestamp("2023-01-02", tz="UTC"),  # New Years Day
+            pd.Timestamp("2023-01-16", tz="UTC"),  # Martin Luther King Jr. Day
+            pd.Timestamp("2023-02-20", tz="UTC"),  # Washington's Birthday
+            pd.Timestamp("2023-04-07", tz="UTC"),  # Good Friday
+            pd.Timestamp("2023-05-29", tz="UTC"),  # Memorial Day
+            pd.Timestamp("2023-06-19", tz="UTC"),  # Juneteenth
+            pd.Timestamp("2023-07-04", tz="UTC"),  # Independence Day
+            pd.Timestamp("2023-09-04", tz="UTC"),  # Labor Day
+            pd.Timestamp("2023-11-23", tz="UTC"),  # Thanksgiving Day
+            pd.Timestamp("2023-12-25", tz="UTC"),  # Christmas Day
+        ]
+
+        early_closes = [
+            pd.Timestamp("2023-07-03", tz="UTC"),  # Independence Day
+            pd.Timestamp("2023-11-24", tz="UTC"),  # Thanksgiving Day
+        ]
+
+        for session_label in expected_holidays_2023:
+            self.assertNotIn(session_label, self.calendar.all_sessions)
+
+        for session_label in early_closes:
+            self.assertIn(session_label, self.calendar.early_closes)
+
+        weekdays = pd.bdate_range(
+            start="2023-01-01",
+            end="2023-12-31",
+            tz="UTC",
+        )
+        bdays = weekdays[~weekdays.isin(expected_holidays_2023)]
+        for session_label in bdays:
+            self.assertIn(session_label, self.calendar.all_sessions)
