@@ -302,7 +302,7 @@ class XNYSCalendarTestCase(ExchangeCalendarTestBase, TestCase):
         early_closes = [
             pd.Timestamp("2024-07-03", tz="UTC"),  # Independence Day
             pd.Timestamp("2024-11-24", tz="UTC"),  # Thanksgiving Day
-            pd.Timestamp("2024-12-24", tz="UTC"),  # Christmas Eve (if on Mon, Tue, Wed, Thu)
+            pd.Timestamp("2024-12-24", tz="UTC"),  # Christmas Eve
         ]
 
         for session_label in expected_holidays_2024:
