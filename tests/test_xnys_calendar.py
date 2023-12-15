@@ -301,7 +301,7 @@ class XNYSCalendarTestCase(ExchangeCalendarTestBase, TestCase):
 
         early_closes = [
             pd.Timestamp("2024-07-03", tz="UTC"),  # Independence Day
-            pd.Timestamp("2024-11-24", tz="UTC"),  # Thanksgiving Day
+            pd.Timestamp("2024-11-29", tz="UTC"),  # Thanksgiving Day
             pd.Timestamp("2024-12-24", tz="UTC"),  # Christmas Eve
         ]
 
