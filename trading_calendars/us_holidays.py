@@ -164,7 +164,7 @@ USJuneteenthNationalIndependenceDay = Holiday(
     month=6,
     day=19,
     start_date=Timestamp("2022-01-01"),
-    offset=DateOffset(weekday=MO(1)),
+    observance=nearest_workday,
 )
 
 USIndependenceDayBefore1954 = Holiday(
